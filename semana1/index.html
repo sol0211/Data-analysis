@@ -584,72 +584,78 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;lin
 
   <!-- Dataset -->
   <div class="dataset-card">
-    <div class="dataset-card">
-    <div>
-      <div class="card-label">Dataset Principal</div>
-      <h4>Atenciones Oncológicas — IREN Centro</h4>
-      <p>Datos oficiales del Instituto Regional de Enfermedades Neoplásicas Centro - MINSA. Incluye registros de atenciones, especialidades (UPSS) y demografía del paciente.</p>
-      <a href="https://www.datosabiertos.gob.pe/dataset/atenciones-oncol%C3%B3gicas-realizadas-en-iren-centro-instituto-regional-de-enfermedades" target="_blank">↗ Plataforma Nacional de Datos Abiertos</a>
-    </div>
-    <div><div class="card-label">Alternativa</div><h4>Superstore Sales Dataset</h4><p>Dataset de ventas de una cadena retail con regiones, categorías, descuentos y ganancias. Más de 9,000 registros con inconsistencias de formato reales.</p><a href="https://www.kaggle.com/datasets/vivek468/superstore-dataset-final" target="_blank">↗ Kaggle: Superstore Dataset</a></div>
-    <div><div class="card-label">Problemas de calidad presentes</div><p>→ Fechas en formatos mixtos (DD/MM vs MM/DD)</p><p>→ Descuentos mayores a 1.0 (error de captura)</p><p>→ Profit negativo sin explicación contextual</p><p>→ Categorías con variaciones de texto ("Tech" vs "Technology")</p></div>
-  </div>
-
-  <!-- Resources -->
-  <div class="sec-label">Recursos</div>
-  <div class="res-card">
-    <div class="res-type rt-yt">● YouTube</div>
-    <h5>Corey Schafer — "Python Pandas Tutorial (Part 9): Cleaning Data"</h5>
-    <a href="https://www.youtube.com/watch?v=KdmPHEnPJPs" target="_blank">youtube.com/watch?v=KdmPHEnPJPs</a>
-    <div class="res-use">
-      Antes del lab: ver cómo manejar missing values, limpiar tipos de datos y preparar un DataFrame para análisis.
-    </div>
-  </div>
+      <div>
+        <div class="card-label">Dataset Principal</div>
+        <h4>Atenciones Oncológicas — IREN Centro</h4>
+        <p>Datos oficiales del IREN Centro - MINSA. Incluye registros de atenciones, especialidades (UPSS) y demografía del paciente.</p>
+        <a href="https://www.datosabiertos.gob.pe/dataset/atenciones-oncol%C3%B3gicas-realizadas-en-iren-centro-instituto-regional-de-enfermedades" target="_blank">↗ Plataforma Nacional de Datos Abiertos</a>
+      </div>
   
-  <div class="res-card">
-    <div class="res-type rt-gh">● Documentación</div>
-    <h5>Pandas Official — "Working with missing data"</h5>
-    <a href="https://pandas.pydata.org/docs/user_guide/missing_data.html" target="_blank">pandas.pydata.org/docs/user_guide/missing_data</a>
-    <div class="res-use">
-      Tarea: revisar fillna(), dropna() e interpolación. Aplicar estas técnicas al dataset del laboratorio para tratar vacíos.
-    </div>
-  </div>
+      <div>
+        <div class="card-label">Alternativa</div>
+        <h4>Superstore Sales Dataset</h4>
+        <p>Dataset de ventas retail con regiones, categorías y descuentos. Más de 9,000 registros con inconsistencias reales.</p>
+        <a href="https://www.kaggle.com/datasets/vivek468/superstore-dataset-final" target="_blank">↗ Kaggle: Superstore Dataset</a>
+      </div>
   
-  <div class="res-card">
-    <div class="res-type rt-article">● Artículo</div>
-    <h5>IBM — "What is data quality?"</h5>
-    <a href="https://www.ibm.com/topics/data-quality" target="_blank">ibm.com/topics/data-quality</a>
-    <div class="res-use">
-      Inicio de clase: lectura breve para identificar dimensiones de calidad como exactitud, completitud y consistencia, y discutir su impacto en negocio.
-    </div>
-  </div>
-
-  <!-- Quiz -->
-   <div class="sec-label">Evaluación EP — Cuestionario Tema 1 (3 intentos)</div>
-  <div class="quiz-block">
-    <div class="quiz-hdr">Tema 01 · 3 preguntas · Se considera la nota más alta de los 3 intentos</div>
-    
-    <div class="quiz-q">
-      <div class="qn">Q1</div>
-      <div class="qt">
-        <strong>Mecanismos de ausencia:</strong> En el notebook, la columna <code>monto_prestacion</code> presenta nulos. Tras el perfilado, descubres que la mayoría corresponden a pacientes con "Seguro Integral de Salud (SIS)". ¿Qué tipo de mecanismo de ausencia (MCAR, MAR o MNAR) representa este hallazgo y qué estrategia de imputación usarías para no distorsionar el costo promedio de atención?
+      <div>
+        <div class="card-label">Hallazgos de calidad en este dataset</div>
+        <p>→ Inconsistencias en EDAD vs Año de Nacimiento.</p>
+        <p>→ Registros duplicados por ID_CITA y paciente.</p>
+        <p>→ Nulos en montos dependientes del tipo de seguro.</p>
+        <p>→ Errores de codificación en servicios (tildes).</p>
       </div>
     </div>
   
-    <div class="quiz-q">
-      <div class="qn">Q2</div>
-      <div class="qt">
-        <strong>Perfilado de Consistencia:</strong> Al calcular la edad de los pacientes, el histograma muestra valores atípicos (outliers) como -5 y 125 años. ¿Cómo impacta esto en el cálculo de la media poblacional? Según el código desarrollado, ¿por qué es preferible filtrar estos rangos antes de entregar el diccionario de datos al MINSA?
+    <div class="sec-label">Recursos</div>
+    <div class="res-grid">
+      <div class="res-card">
+        <div class="res-type rt-yt">● YouTube</div>
+        <h5>Corey Schafer — "Cleaning Data in Pandas"</h5>
+        <a href="https://www.youtube.com/watch?v=KdmPHEnPJPs" target="_blank">youtube.com/watch?v=KdmPHEnPJPs</a>
+        <div class="res-use">Manejo de missing values y preparación de DataFrames.</div>
+      </div>
+      
+      <div class="res-card">
+        <div class="res-type rt-gh">● Documentación</div>
+        <h5>Pandas Official — "Missing data"</h5>
+        <a href="https://pandas.pydata.org/docs/user_guide/missing_data.html" target="_blank">pandas.pydata.org/docs/missing_data</a>
+        <div class="res-use">Revisar fillna(), dropna() e interpolación para tratar vacíos.</div>
+      </div>
+      
+      <div class="res-card">
+        <div class="res-type rt-article">● Artículo</div>
+        <h5>IBM — "What is data quality?"</h5>
+        <a href="https://www.ibm.com/topics/data-quality" target="_blank">ibm.com/topics/data-quality</a>
+        <div class="res-use">Lectura sobre exactitud, completitud y consistencia.</div>
       </div>
     </div>
   
-    <div class="quiz-q">
-      <div class="qn">Q3</div>
-      <div class="qt">
-        <strong>Unicidad y Procesos:</strong> Durante el laboratorio identificamos que el dataset tiene registros duplicados exactos (ID de atención repetido). Si el IREN Centro usa este reporte para solicitar presupuesto por paciente atendido, ¿cuál es el riesgo ético y financiero de no eliminar estos duplicados en la etapa de pre-procesamiento?
+    <div class="sec-label">Evaluación EP — Cuestionario Tema 1 (3 intentos)</div>
+    <div class="quiz-block">
+      <div class="quiz-hdr">Tema 01 · 3 preguntas · Se considera la nota más alta de los 3 intentos</div>
+      
+      <div class="quiz-q">
+        <div class="qn">Q1</div>
+        <div class="qt">
+          <strong>Tratamiento de Nulos:</strong> En el notebook, la columna <code>monto_prestacion</code> presenta nulos para pacientes con "SIS". ¿Qué estrategia aplicarías para no distorsionar el costo promedio?
+        </div>
+      </div>
+  
+      <div class="quiz-q">
+        <div class="qn">Q2</div>
+        <div class="qt">
+          <strong>Perfilado de Consistencia:</strong> El histograma muestra edades de -5 y 125 años. ¿Cómo impacta esto en la media y por qué filtrarlos antes de entregar al MINSA?
+        </div>
+      </div>
+  
+      <div class="quiz-q">
+        <div class="qn">Q3</div>
+        <div class="qt">
+          <strong>Unicidad:</strong> El dataset tiene registros duplicados exactos. ¿Cuál es el riesgo ético y financiero si el IREN Centro usa esto para solicitar presupuesto?
+        </div>
       </div>
     </div>
-  </div>
 
 <!-- ═══════════════════ TEMA 2 ═══════════════════ -->
 <div class="week-panel" id="panel-2">
