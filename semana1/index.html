@@ -491,9 +491,26 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;lin
   <!-- Flujo de clase -->
   <div class="sec-label">Flujo de clase</div>
   <div class="flow-row">
-    <div class="flow-step"><div class="flow-tag ft-hook">Inicio · 15 min</div><div class="flow-step-num">01</div><h5>"¿Cuánto cuesta un dato malo?"</h5><p>Knight Capital perdió $440M en 45 min por un servidor con datos de configuración desactualizados. IBM estima pérdidas de $3.1T anuales en EE.UU. por mala calidad de datos. Pregunta al aula: ¿cuánto vale un dato incorrecto en tu industria?</p></div>
-    <div class="flow-step"><div class="flow-tag ft-dev">Desarrollo · 60 min</div><div class="flow-step-num">02</div><h5>Demo + lab guiado en Power BI y Python</h5><p>Cargar el CSV del caso Wong. Generar perfil de calidad. Identificar los 5 problemas principales. Aplicar 3 acciones de limpieza justificadas. Construir diccionario de datos con licencia.</p></div>
-    <div class="flow-step"><div class="flow-tag ft-close">Cierre · 15 min</div><div class="flow-step-num">03</div><h5>¿Qué le dices al CFO en 2 oraciones?</h5><p>Cada equipo sintetiza el problema encontrado y la decisión que cambiaría. ¿Cuánto del diferencial de S/ 2.3M se explica con los problemas encontrados?</p></div>
+    <div class="flow-step">
+      <div class="flow-tag ft-hook">Inicio · 20 min</div>
+      <div class="flow-step-num">01</div>
+      <h5>"El costo del error en salud"</h5>
+      <p>Discusión sobre el impacto de datos oncológicos erróneos: desde diagnósticos mal asignados hasta presupuestos hospitalarios perdidos. ¿Qué pasa si un paciente recibe el tratamiento equivocado por un DNI duplicado?</p>
+    </div>
+  
+    <div class="flow-step">
+      <div class="flow-tag ft-dev">Desarrollo · 60 min</div>
+      <div class="flow-step-num">02</div>
+      <h5>Perfilado y Limpieza en Python</h5>
+      <p>Carga del dataset del IREN Centro. Detección de codificaciones (UTF-8/Latin1). Perfilado de calidad para hallar diagnósticos CIE-10 vacíos y duplicados. Aplicación de limpieza técnica y creación del diccionario de datos.</p>
+    </div>
+  
+    <div class="flow-step">
+      <div class="flow-tag ft-close">Cierre · 10 min</div>
+      <div class="flow-step-num">03</div>
+      <h5>Validación de integridad del reporte</h5>
+      <p>Cada equipo presenta el hallazgo más crítico: ¿Cuántos registros eran inconsistentes y cómo afecta esto al reporte nacional? Conclusión sobre el uso responsable de datos sensibles en salud.</p>
+    </div>
   </div>
 
   <div class="err-banner"><div class="err-icon">⚠</div><div class="err-text"><strong>Error real en producción:</strong> Eliminar todas las filas con nulos asumiendo que son aleatorios (MCAR), cuando en realidad los nulos en precio_unitario se concentran en la categoría "devoluciones" (MNAR). Eliminarlos distorsiona el revenue neto hasta en un 12%.</div></div>
