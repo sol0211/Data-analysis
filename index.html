@@ -4,38 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Análisis de Datos 2026-01</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=IBM+Plex+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        :root { --accent: #ff4d4d; --bg: #0d1117; }
-        body { background: var(--bg); color: #e8e8f0; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
-        .container { max-width: 650px; width: 90%; padding: 40px 0; }
-        .card-label { color: var(--accent); font-weight: bold; letter-spacing: 2px; font-size: 12px; margin-bottom: 10px; }
-        h1 { font-size: 2.2rem; margin: 0 0 10px 0; }
-        .subtitle { color: #8b949e; margin-bottom: 40px; }
-        .menu-grid { display: grid; gap: 12px; }
-        .btn-week { 
-            background: #161b22; border: 1px solid #30363d; color: white; 
-            padding: 20px 25px; border-radius: 12px; text-decoration: none; 
+        :root { --accent: #ff4d4d; --bg: #0a0a0f; --surface: #12121a; --border: #2a2a3a; --muted: #7878a0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: #e8e8f0; font-family: 'DM Sans', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .container { max-width: 680px; width: 90%; padding: 56px 0; }
+        .eyebrow { font-family: 'IBM Plex Mono', monospace; color: var(--accent); letter-spacing: 3px; font-size: 10px; text-transform: uppercase; margin-bottom: 14px; }
+        h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 2.4rem; line-height: 1.1; margin-bottom: 10px; }
+        h1 em { font-style: normal; color: var(--accent); }
+        .subtitle { color: var(--muted); margin-bottom: 44px; font-size: .95rem; font-weight: 300; }
+        .menu-grid { display: grid; gap: 10px; }
+        .btn-week {
+            background: var(--surface); border: 1px solid var(--border); color: #e8e8f0;
+            padding: 18px 22px; border-radius: 12px; text-decoration: none;
             display: flex; justify-content: space-between; align-items: center;
-            transition: 0.2s ease;
+            transition: border-color .2s, background .2s, transform .2s;
         }
-        .btn-week:hover { border-color: var(--accent); background: #1c2128; transform: translateX(5px); }
-        .btn-week span { color: var(--accent); font-weight: bold; font-size: 1.2rem; }
+        .btn-week:hover { border-color: var(--accent); background: #1c1c2a; transform: translateX(5px); }
+        .btn-left { display: flex; align-items: center; gap: 14px; }
+        .week-num { font-family: 'IBM Plex Mono', monospace; font-size: .65rem; color: var(--accent); letter-spacing: 2px; min-width: 52px; }
+        .week-info { display: flex; flex-direction: column; }
+        .week-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: .95rem; }
+        .week-sub { font-size: .75rem; color: var(--muted); margin-top: 2px; }
+        .arrow { color: var(--accent); font-weight: bold; font-size: 1.1rem; opacity: .6; transition: opacity .2s; }
+        .btn-week:hover .arrow { opacity: 1; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="card-label">PORTAFOLIO ACADÉMICO</div>
-        <h1>Análisis de Datos 2026-01</h1>
+        <div class="eyebrow">PORTAFOLIO ACADÉMICO</div>
+        <h1>Análisis de <em>Datos</em> 2026-01</h1>
         <p class="subtitle">Selecciona una sesión para revisar el laboratorio y materiales.</p>
-        
+
         <div class="menu-grid">
-            <a href="semana1/index.html" class="btn-week">Semana 01: Calidad de Datos <span>→</span></a>
-            <a href="semana2/index.html" class="btn-week">Semana 02: Ingesta y Perfilado <span>→</span></a>
-            <a href="semana3/index.html" class="btn-week">Semana 03: Control de Calidad <span>→</span></a>
-            <a href="semana4/index.html" class="btn-week">Semana 04: Gestión de Diccionarios <span>→</span></a>
-            <a href="semana5/index.html" class="btn-week">Semana 05: Ética y Licenciamiento <span>→</span></a>
-            <a href="semana6/index.html" class="btn-week">Semana 06: Pipeline de Datos <span>→</span></a>
-            <a href="semana7/index.html" class="btn-week">Semana 07: Entrega Final <span>→</span></a>
+            <a href="semana1/index.html?week=1" class="btn-week">
+                <div class="btn-left">
+                    <span class="week-num">TEMA 01</span>
+                    <div class="week-info">
+                        <span class="week-title">Ingesta y calidad de datos</span>
+                        <span class="week-sub">Importación, perfilado y limpieza básica</span>
+                    </div>
+                </div>
+                <span class="arrow">→</span>
+            </a>
+            <a href="semana1/index.html?week=2" class="btn-week">
+                <div class="btn-left">
+                    <span class="week-num">TEMA 02</span>
+                    <div class="week-info">
+                        <span class="week-title">Wrangling con Python/R y SQL</span>
+                        <span class="week-sub">ETL, JOINs y KPIs base</span>
+                    </div>
+                </div>
+                <span class="arrow">→</span>
+            </a>
+            <a href="semana1/index.html?week=3" class="btn-week">
+                <div class="btn-left">
+                    <span class="week-num">TEMA 03</span>
+                    <div class="week-info">
+                        <span class="week-title">Exploración y estadística descriptiva</span>
+                        <span class="week-sub">EDA, distribuciones y visualización</span>
+                    </div>
+                </div>
+                <span class="arrow">→</span>
+            </a>
+            <a href="semana1/index.html?week=4" class="btn-week">
+                <div class="btn-left">
+                    <span class="week-num">TEMA 04</span>
+                    <div class="week-info">
+                        <span class="week-title">KPIs y análisis temporal</span>
+                        <span class="week-sub">Series de tiempo, tendencias y alertas</span>
+                    </div>
+                </div>
+                <span class="arrow">→</span>
+            </a>
+            <a href="semana1/index.html?week=5" class="btn-week">
+                <div class="btn-left">
+                    <span class="week-num">TEMA 05</span>
+                    <div class="week-info">
+                        <span class="week-title">Estadística para la toma de decisiones</span>
+                        <span class="week-sub">Pruebas de hipótesis y correlaciones</span>
+                    </div>
+                </div>
+                <span class="arrow">→</span>
+            </a>
+            <a href="semana1/index.html?week=6" class="btn-week">
+                <div class="btn-left">
+                    <span class="week-num">TEMA 06</span>
+                    <div class="week-info">
+                        <span class="week-title">Publicación, seguridad y reproducibilidad</span>
+                        <span class="week-sub">GitHub Pages, licencias y ética de datos</span>
+                    </div>
+                </div>
+                <span class="arrow">→</span>
+            </a>
+            <a href="semana7/index.html?week=7" class="btn-week">
+                <div class="btn-left">
+                    <span class="week-num">TEMA 07</span>
+                    <div class="week-info">
+                        <span class="week-title">Proyecto MVP analítico por carrera</span>
+                        <span class="week-sub">Entrega final integradora</span>
+                    </div>
+                </div>
+                <span class="arrow">→</span>
+            </a>
         </div>
     </div>
 </body>
