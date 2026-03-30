@@ -635,7 +635,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;lin
   <div class="quiz-q">
     <div class="qn">Q1</div>
     <div class="qt">
-      <strong>Mecanismos de ausencia:</strong> En el notebook, la columna <code>monto_prestacion</code> presenta nulos. Tras el perfilado, descubres que la mayoría corresponden a pacientes con "Seguro Integral de Salud (SIS)". ¿Qué tipo de mecanismo de ausencia (MCAR, MAR o MNAR) representa este hallazgo y qué estrategia de imputación usarías para no distorsionar el costo promedio de atención?
+      <strong>Tratamiento de Nulos:</strong> En el notebook, la columna <code>monto_prestacion</code> presenta valores nulos que corresponden mayoritariamente a pacientes con "Seguro Integral de Salud (SIS)". Si tu objetivo es no distorsionar el costo promedio real de las atenciones pagadas, ¿qué estrategia aplicarías: completar con la <strong>media</strong>, con la <strong>mediana</strong> o aplicar <strong>eliminación</strong> de esos registros? Justifica tu elección basándote en la naturaleza de esos datos.
     </div>
   </div>
 
